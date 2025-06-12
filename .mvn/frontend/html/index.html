@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Baby Spa</title>
+    <link rel="stylesheet" href="../css/index.css" />
+
+</head>
+<body>
+<nav>
+    <div class="logo">Baby Spa</div>
+    <ul class="nav-links">
+        <li><a href="#" id="link-home">Početna</a></li>
+        <li><a href="#" id="link-tretmani">Tretmani</a></li>
+        <li><a href="#" id="link-termini">Moji Termini</a></li>
+        <li><a href="#" id="link-login">Prijava / Registracija</a></li>
+        <li><button id="btn-logout" style="display:none">Odjavi se</button></li>
+    </ul>
+</nav>
+
+<main>
+    <section id="login-register-section">
+        <h2>Prijava</h2>
+        <form id="login-form">
+            <input type="email" id="login-email" placeholder="Email" required />
+            <input type="password" id="login-password" placeholder="Lozinka" required />
+            <button type="submit">Prijavi se</button>
+        </form>
+
+        <h2>Registracija</h2>
+        <form id="register-form">
+            <input type="text" id="register-ime" placeholder="Ime" required />
+            <input type="email" id="register-email" placeholder="Email" required />
+            <input type="password" id="register-password" placeholder="Lozinka" required />
+            <button type="submit">Registruj se</button>
+        </form>
+    </section>
+
+    <section id="tretmani-section" style="display:none">
+        <h2>Tretmani</h2>
+
+        <div id="tretmani-list"></div>
+    </section>
+
+    <section id="zakazivanje-section" style="display:none">
+        <h2>Zakaži tretman</h2>
+        <form id="zakazi-form">
+            <label for="datum">Datum i vreme:</label>
+            <input type="datetime-local" id="datum" required />
+            <input type="hidden" id="tretman-id" />
+            <button type="submit">Zakaži</button>
+        </form>
+    </section>
+
+    <section id="moji-termini-section" style="display:none">
+        <h2>Moji termini</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Tretman</th>
+                <th>Datum</th>
+                <th>Akcija</th>
+            </tr>
+            </thead>
+            <tbody id="termini-tabela"></tbody>
+        </table>
+    </section>
+</main>
+
+<script src="../js/main.js"></script>
+
+</body>
+</html>
