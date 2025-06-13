@@ -1,4 +1,5 @@
 nav {
+  position: relative; /* da bismo mogli apsolutno pozicionirati guest avatar */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,14 +29,15 @@ nav {
     transition: color 0.3s;
   }
 
-
   ul li a:hover {
     color: #d58cb4;
     text-decoration: underline;
   }
 
-  .avatar {
+  /* Avatar za ulogovanog korisnika - ide desno, pomera meni */
+  .avatar.logged-in {
     margin-left: auto;
+
     img {
       width: 75px;
       height: 75px;
@@ -50,10 +52,27 @@ nav {
       transform: scale(1.05);
     }
   }
+
+  /* Avatar za gosta - apsolutno pozicioniran da ne remeti meni */
+  .avatar.guest {
+    position: absolute;
+    top: 50%;
+    right: 30px; /* isto kao padding desno u nav */
+    transform: translateY(-50%);
+
+    img {
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      cursor: default; /* ako želiš, možeš da nema hover efekt */
+      transition: none;
+    }
+  }
 }
+
 .cart-link {
-
-
   ul {
     list-style: none;
     align-items: center;

@@ -1,17 +1,10 @@
-<nav>
-  <ul>
+<nav class="navbar">
+  <ul class="menu">
     <li><a routerLink="">Početna</a></li>
     <li><a (click)="scrollToSection('services')">Usluge</a></li>
     <li><a (click)="scrollToSection('price-list')">Cenovnik</a></li>
     <li><a (click)="scrollToSection('contact')">Kontakt</a></li>
-    <li>
-      <a routerLink="cart" class="cart-link">
-        <mat-icon aria-hidden="false" aria-label="Korpa"></mat-icon>
-        <span>Korpa</span>
-      </a>
-    </li>
-
-
+    <li><a routerLink="cart">Korpa</a></li>
 
     <ng-container *ngIf="isLoggedIn">
       <li><a routerLink="profile">Profil</a></li>
@@ -27,7 +20,11 @@
     </ng-container>
   </ul>
 
-  <div class="avatar" *ngIf="isLoggedIn">
+  <div class="avatar logged-in" *ngIf="isLoggedIn">
     <img src="/assets/images/profilna.jpg" alt="Profilna slika" />
+  </div>
+
+  <div class="avatar guest" *ngIf="!isLoggedIn">
+    <img src="/assets/images/profilna.jpg" alt="Gost slika" />
   </div>
 </nav>
