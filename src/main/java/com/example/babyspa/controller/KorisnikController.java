@@ -20,13 +20,13 @@ public class KorisnikController {
     @PostMapping("/register")
     public ResponseEntity<Korisnik> register(@RequestBody Korisnik korisnik) {
         Korisnik newKorisnik = korisnikService.registrujKorisnika(korisnik);
-        return ResponseEntity.ok(newKorisnik);  // Vraća novog korisnika sa šifrovanom lozinkom
+        return ResponseEntity.ok(newKorisnik);
     }
 
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody Korisnik korisnik) {
         String token = korisnikService.login(korisnik);
-        return ResponseEntity.ok(token);  // Vraća JWT token
+        return ResponseEntity.ok(token);
     }
 
     @GetMapping("/{id}")

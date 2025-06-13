@@ -13,9 +13,7 @@ public class Korisnik {
     private String email;
     private String lozinka;
     @Enumerated(EnumType.STRING)
-    private Uloga uloga = Uloga.KLIJENT;  // podrazumevana vrednost
-
-    // Konstruktor bez parametara (neophodan za JPA)
+    private Uloga uloga = Uloga.KLIJENT;
     public Korisnik() {}
 
     public Integer getId() {return id;}

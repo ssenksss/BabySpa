@@ -22,7 +22,7 @@ public class UserDetailsServiceImpl implements org.springframework.security.core
         return User.builder()
                 .username(korisnik.getEmail())
                 .password(korisnik.getLozinka())
-                .roles(korisnik.getUloga().name()) // koristi name() jer je enum
+                .roles(korisnik.getUloga().name())
                 .build();
     }
 
