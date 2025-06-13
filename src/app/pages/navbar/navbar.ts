@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { AuthService } from '../auth/auth';
+import {MatIcon, MatIconModule} from '@angular/material/icon';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
   templateUrl: './navbar.html',
   styleUrls: ['./navbar.scss'],
-  imports: [CommonModule, RouterModule]
+  imports: [CommonModule, RouterModule, MatIconModule]
 })
 export class Navbar {
   isLoggedIn = false;

@@ -1,13 +1,13 @@
 import {
-  ResizableDirective,
-  ResizableModule,
-  ResizeHandleDirective
-} from "./chunk-RNDWFZW2.js";
-import {
   DragAndDropModule,
   DraggableDirective,
   DroppableDirective
 } from "./chunk-6R3ZJJHK.js";
+import {
+  ResizableDirective,
+  ResizableModule,
+  ResizeHandleDirective
+} from "./chunk-RNDWFZW2.js";
 import {
   AsyncPipe,
   CommonModule,

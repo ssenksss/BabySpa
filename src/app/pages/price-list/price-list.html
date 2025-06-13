@@ -1,18 +1,17 @@
-
 <section class="price-list">
-    <h1 class="title">Cenovnik</h1>
+  <h1 class="title">Cenovnik</h1>
 
-    <div *ngFor="let grupa of usluge" class="category">
-        <h2>{{ grupa.kategorija }}</h2>
-        <div class="items">
-            <div class="item" *ngFor="let stavka of grupa.stavke">
-                <div class="left">
-                    <span>{{ stavka.naziv }}</span>
-                </div>
-                <div class="right">
-                    <span>{{ stavka.cena }}</span>
-                </div>
-            </div>
+  <div *ngFor="let grupa of usluge" class="category">
+    <h2>{{ grupa.kategorija }}</h2>
+    <div class="items">
+      <div class="item" *ngFor="let stavka of grupa.stavke" (click)="dodajUKorpu(stavka)">
+        <div class="left">
+          <span>{{ stavka.naziv }}</span>
         </div>
+        <div class="right">
+          <span>{{ stavka.cena | number }} RSD</span>
+        </div>
+      </div>
     </div>
+  </div>
 </section>

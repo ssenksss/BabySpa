@@ -1,0 +1,58 @@
+<div class="cart-container" *ngIf="items.length > 0; else emptyCart">
+  <table mat-table [dataSource]="items" class="mat-elevation-z8">
+    <ng-container matColumnDef="naziv">
+      <th mat-header-cell *matHeaderCellDef> Naziv </th>
+      <td mat-cell *matCellDef="let item"> {{item.naziv}} </td>
+    </ng-container>
+
+
+
+    <ng-container matColumnDef="cena">
+      <th mat-header-cell *matHeaderCellDef> Cena </th>
+      <td mat-cell *matCellDef="let item"> {{item.cena ? item.cena + ' RSD' : '-' }} </td>
+    </ng-container>
+
+
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let item">
+        <button mat-stroked-button color="warn" class="delete-text" (click)="remove(item.id)">Ukloni</button>
+
+      </td>
+    </ng-container>
+
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <div class="total-price">
+    <p>Ukupna cena: {{ total }} RSD</p>
+  </div>
+
+  <div class="buttons">
+    <button mat-button color="accent" (click)="goHome()">Nazad na usluge</button>
+    <button class="order-button" (click)="placeOrder()">Zakazi</button>
+    <button mat-raised-button color="warn" (click)="clear()">Isprazni korpu</button>
+
+  </div>
+
+  <div *ngIf="showTimeSelection" class="time-selection">
+    <label for="time">Izaberite vreme:</label>
+    <input type="time" id="time" name="time" required>
+    <button mat-raised-button color="primary" (click)="confirmTime()">Potvrdi</button>
+  </div>
+</div>
+
+<ng-template #emptyCart>
+  <mat-card class="empty-cart">
+    <p class="empty-message">Vaša korpa je prazna.</p>
+
+  </mat-card>
+</ng-template>
+
+<div class="empty-actions">
+  <button mat-raised-button color="primary" (click)="goHome()">Dodajte tretman</button>
+</div>

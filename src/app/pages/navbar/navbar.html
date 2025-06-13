@@ -4,6 +4,14 @@
     <li><a (click)="scrollToSection('services')">Usluge</a></li>
     <li><a (click)="scrollToSection('price-list')">Cenovnik</a></li>
     <li><a (click)="scrollToSection('contact')">Kontakt</a></li>
+    <li>
+      <a routerLink="cart" class="cart-link">
+        <mat-icon aria-hidden="false" aria-label="Korpa"></mat-icon>
+        <span>Korpa</span>
+      </a>
+    </li>
+
+
 
     <ng-container *ngIf="isLoggedIn">
       <li><a routerLink="profile">Profil</a></li>

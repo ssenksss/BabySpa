@@ -8,7 +8,7 @@ import {
   Platform,
   coerceElement,
   coerceNumberProperty
-} from "./chunk-FLYKIBSZ.js";
+} from "./chunk-XYMN3EWK.js";
 import {
   APP_ID,
   CSP_NONCE,
@@ -2785,4 +2785,4 @@ export {
   MATERIAL_SANITY_CHECKS,
   MatCommonModule
 };
-//# sourceMappingURL=chunk-C2R4AUJ6.js.map
+//# sourceMappingURL=chunk-C64MUW3T.js.map

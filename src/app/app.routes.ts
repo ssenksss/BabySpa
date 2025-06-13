@@ -10,6 +10,7 @@ import { Profile } from './pages/profile/profile';
 import { Admin } from './pages/admin/admin';
 import {Calendar} from './pages/calendar/calendar';
 import {Terms} from './pages/terms/terms';
+import {Cart} from './pages/cart/cart';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -22,6 +23,7 @@ export const routes: Routes = [
   { path: 'admin', component: Admin },
   { path: 'terms', component: Terms },
   { path: 'calendar', component: Calendar },
+  { path: 'cart', component: Cart },
 
 ];
 

@@ -4410,6 +4410,7 @@ export {
   provideProtractorTestingSupport,
   platformBrowser,
   BrowserModule,
+  HttpClient,
   Meta,
   Title,
   enableDebugTools,
@@ -4444,4 +4445,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-H6FVKYH7.js.map
+//# sourceMappingURL=chunk-NVCFK3W3.js.map
