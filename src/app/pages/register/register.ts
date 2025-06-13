@@ -27,8 +27,8 @@ export class Register {
   registerForm: FormGroup;
   userExists = false;
 
-  minDate = new Date(1900, 0, 1);  // 1. januar 1900.
-  maxDate = new Date();            // današnji datum
+  minDate = new Date(1900, 0, 1);
+  maxDate = new Date();
 
   private existingUsers = ['postojeci@korisnik.com'];
 
