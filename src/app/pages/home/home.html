@@ -1,0 +1,19 @@
+<section class="hero">
+  <div class="overlay">
+    <h1>Dobrodošli u Baby Spa Kraljevo</h1>
+    <p>Nežnost, ljubav i relaksacija za vaše najmilije</p>
+    <a (click)="scrollToSection('contact')" class="cta-button">Zakaži termin</a>
+  </div>
+</section>
+
+<app-services>
+  <a (click)="scrollToSection('price-list')"> </a>
+</app-services>
+
+<section id="price-list">
+  <app-price-list></app-price-list>
+</section>
+
+<section id="contact">
+  <app-contact></app-contact>
+</section>

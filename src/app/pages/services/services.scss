@@ -1,0 +1,33 @@
+
+.usluge {
+  padding: 3rem 1rem;
+  background-color: #fff9f9;
+  text-align: center;
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+
+    .card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      width: 250px;
+    }
+  }
+}
+
+.kontakt {
+  padding: 2rem;
+  text-align: center;
+  background-color: #fef4f4;
+  a {
+    color: #d17f96;
+    text-decoration: none;
+    font-weight: bold;
+  }
+}

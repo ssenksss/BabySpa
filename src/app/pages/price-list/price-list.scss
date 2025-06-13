@@ -1,0 +1,65 @@
+.price-list {
+  position: relative;
+  padding: 4rem 2rem;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+
+  }
+
+  .title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #d58cb4;
+    margin-bottom: 2rem;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    z-index: 1;
+  }
+
+  .items {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1rem 1.5rem;
+      margin-bottom: 1.2rem;
+      box-shadow: 0 4px 12px rgba(213, 140, 180, 0.2);
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+
+      .left {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        img {
+          width: 36px;
+        }
+
+        span {
+          font-size: 1.2rem;
+          font-weight: 500;
+          color: #5c3a58;
+        }
+      }
+
+      .right span {
+        font-weight: 600;
+        color: #b83280;
+      }
+    }
+  }
+

@@ -1,0 +1,24 @@
+<section class="admin-hero">
+  <h1>Admin panel</h1>
+  <p>Pregled i upravljanje terminima</p>
+  <div class="admin-buttons">
+    <button (click)="loginAsUser()">Login kao korisnik</button>
+    <button (click)="loginAsAdmin()">Login kao admin</button>
+  </div>
+</section>
+
+<nav class="admin-nav">
+  <ul>
+    <li><a (click)="scrollToSection('calendar')"></a></li>
+    <li><a (click)="scrollToSection('terms')"></a></li>
+  </ul>
+</nav>
+
+<section id="terms">
+  <app-terms></app-terms>
+</section>
+
+<section id="calendar">
+  <app-calendar></app-calendar>
+</section>
+

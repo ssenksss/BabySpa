@@ -1,0 +1,25 @@
+<nav>
+  <ul>
+    <li><a routerLink="">Početna</a></li>
+    <li><a (click)="scrollToSection('services')">Usluge</a></li>
+    <li><a (click)="scrollToSection('price-list')">Cenovnik</a></li>
+    <li><a (click)="scrollToSection('contact')">Kontakt</a></li>
+
+    <ng-container *ngIf="isLoggedIn">
+      <li><a routerLink="profile">Profil</a></li>
+      <li *ngIf="isAdmin"><a routerLink="admin">Admin</a></li>
+      <li *ngIf="isAdmin"><a (click)="goToAdminSection('terms')">Termini</a></li>
+      <li *ngIf="isAdmin"><a (click)="goToAdminSection('calendar')">Kalendar</a></li>
+      <li><a (click)="logout()">Logout</a></li>
+    </ng-container>
+
+    <ng-container *ngIf="!isLoggedIn">
+      <li><a routerLink="login">Login</a></li>
+      <li><a routerLink="register">Register</a></li>
+    </ng-container>
+  </ul>
+
+  <div class="avatar" *ngIf="isLoggedIn">
+    <img src="/assets/images/profilna.jpg" alt="Profilna slika" />
+  </div>
+</nav>

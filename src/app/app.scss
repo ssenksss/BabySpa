@@ -1,0 +1,80 @@
+@use "sass:color";
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .main-wrapper {
+    padding: 0 10px;
+  }
+}
+
+
+
+$primary-color: #ff6f91;
+$secondary-color: #fff0f6;
+$text-color: #333;
+$font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+body {
+  font-family: $font-family;
+  background-color: $secondary-color;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+  color: $primary-color;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: color.adjust($primary-color, $lightness: -10%);
+}
+
+nav a:focus {
+  outline: 2px dashed $primary-color;
+  outline-offset: 4px;
+}
+
+
+.main-wrapper {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(255, 111, 145, 0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease,box-shadow 0.3s ease;
+}
+
+
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+h1, h2, h3 {
+  color: $primary-color;
+  font-weight: 700;
+}

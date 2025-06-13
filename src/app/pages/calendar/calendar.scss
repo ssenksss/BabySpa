@@ -1,0 +1,27 @@
+.calendar-container {
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+
+  .view-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+
+    button {
+      padding: 0.5rem 1rem;
+      background-color: #b83280;
+      border: none;
+      color: white;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #d58cb4;
+      }
+    }
+  }
+}
